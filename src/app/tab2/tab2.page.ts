@@ -6,7 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  tebakan=0;
+  id="tandatanya"
+  constructor() {
+  }
 
-  constructor() {}
-
+  tebak(){
+    var angka = Math.floor(Math.random() * 10);
+    if(this.tebakan == angka){
+      console.log("bener");
+      alert("bener");
+      this.id="profile";
+    }
+    else{
+      console.log("salah");
+      alert("salah");
+    }
+  }
 }
